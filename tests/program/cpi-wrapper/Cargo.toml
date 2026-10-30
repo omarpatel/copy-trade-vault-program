@@ -1,0 +1,18 @@
+[package]
+name = "cpi-wrapper"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Test fixture: forwards its instruction to another program via CPI (proves copy-vault rejects CPI callers)"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+
+[dependencies]
+solana-program = "2.2"
+
+# Built on its own (tests/program/cpi-wrapper/build.sh), not as part of the root workspace.
+[workspace]
+
+[features]
+no-entrypoint = []

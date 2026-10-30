@@ -1,0 +1,94 @@
+{
+ "entries": [
+  {
+   "rank": 1,
+   "walletAddress": "4y2T1ghykCTq4EddoXjptZamk4qAsqcZw6eKxS8jdvE1",
+   "pnlSol": 1703.7139568043458,
+   "pnlUsd": 205672.34886542062,
+   "pnlPercent": 68.7168332866119,
+   "buySpendSol": 0,
+   "lastRefreshedAtMs": 1791144473691,
+   "realizedPnlSol": 0,
+   "realizedPnlUsd": 0,
+   "unrealizedPnlSol": 1703.7139568043458,
+   "unrealizedPnlUsd": 205672.34886542062,
+   "positionsCount": 32,
+   "topPositions": [
+    {
+     "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+     "chainId": 1399811149,
+     "symbol": "baton",
+     "name": "baton",
+     "imageUri": "https://axiomtrading.sfo3.cdn.digitaloceanspaces.com/41UrTGwAokUi5y9qXvHtG82fYsHgCnQE7oFtLhYRwYMP.webp"
+    }
+   ],
+   "username": "hdegroot",
+   "profileImage": "https://pump.mypinata.cloud/ipfs/bafkreiht5bbgsvjczyf3hguvqzimfsipl4a6rw43sxye3fo7ebu4av5ghq",
+   "xUsername": "hdegrootvan",
+   "isVerified": true,
+   "verifiedBadgeVisible": false,
+   "userId": "ecd87de4-52cc-4c70-a965-13903b4c5760"
+  },
+  {
+   "rank": 2,
+   "walletAddress": "EqBQhoU88ty3a3aDphDRCBuiRirjUsFSFi4UHGY64qvv",
+   "pnlSol": 1251.2912533434649,
+   "pnlUsd": 150993.3155409559,
+   "pnlPercent": 77.51203410586874,
+   "buySpendSol": 106.99949259181828,
+   "lastRefreshedAtMs": 1791144592001,
+   "realizedPnlSol": 127.4752336636678,
+   "realizedPnlUsd": 15382.436446194793,
+   "unrealizedPnlSol": 1123.816019679797,
+   "unrealizedPnlUsd": 135610.8790947611,
+   "positionsCount": 3,
+   "topPositions": [
+    {
+     "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+     "chainId": 1399811149,
+     "symbol": "baton",
+     "name": "baton",
+     "imageUri": "https://axiomtrading.sfo3.cdn.digitaloceanspaces.com/41UrTGwAokUi5y9qXvHtG82fYsHgCnQE7oFtLhYRwYMP.webp"
+    }
+   ],
+   "username": "sadcrissy",
+   "profileImage": "https://socialimages.pump.fun/profile-images/ca014f9f-3973-4cfe-bb11-751f3f21864e/c6506588-1b92-4f93-aa82-f6058fdfac14",
+   "xUsername": null,
+   "isVerified": false,
+   "verifiedBadgeVisible": true,
+   "userId": "ca014f9f-3973-4cfe-bb11-751f3f21864e"
+  },
+  {
+   "rank": 3,
+   "walletAddress": "ACTbvbNm5qTLuofNRPxFPMtHAAtdH1CtzhCZatYHy831",
+   "pnlSol": 963.5645359966159,
+   "pnlUsd": 116172.23426672239,
+   "pnlPercent": 60.35644545352182,
+   "buySpendSol": 282.64304646603875,
+   "lastRefreshedAtMs": 1791144677782,
+   "realizedPnlSol": 30.624403793063237,
+   "realizedPnlUsd": 3692.233658274591,
+   "unrealizedPnlSol": 932.9401322035526,
+   "unrealizedPnlUsd": 112480.0006084478,
+   "positionsCount": 26,
+   "topPositions": [
+    {
+     "mint": "Hg5Ja55T5wESq4vyFoiVCMeHXtGyVA69X2UHq8hgpump",
+     "chainId": 1399811149,
+     "symbol": "baton",
+     "name": "baton",
+     "imageUri": "https://axiomtrading.sfo3.cdn.digitaloceanspaces.com/41UrTGwAokUi5y9qXvHtG82fYsHgCnQE7oFtLhYRwYMP.webp"
+    }
+   ],
+   "username": "slidrrz",
+   "profileImage": "https://pump.mypinata.cloud/ipfs/bafkreibevpyy73foilrnjbcgptuv7wr3bn4x5diuyrwgzvbcedczt6s42a",
+   "xUsername": "Slidrrz",
+   "isVerified": true,
+   "verifiedBadgeVisible": false,
+   "userId": "1b1cb298-12ca-40a1-acfb-a95cdc0a2ea3"
+  }
+ ],
+ "periodType": 3,
+ "periodLabel": "24h",
+ "windowStartSec": 1791057600
+}

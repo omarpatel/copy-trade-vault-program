@@ -1,0 +1,34 @@
+{
+ "data": [
+  {
+   "wallet_address": "6HJetMbdHBuk3mLUainxAPpBpWzDgYbHGTS2TqDAUSX2",
+   "name": "LJC",
+   "telegram": "https://t.me/LJCcabals",
+   "twitter": "https://x.com/OnlyLJC",
+   "profit": 6728.884750114548,
+   "wins": 57,
+   "losses": 99,
+   "timeframe": 30
+  },
+  {
+   "wallet_address": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+   "name": "decu",
+   "telegram": "https://t.me/DecusCalls",
+   "twitter": "https://x.com/notdecu",
+   "profit": 4413.936148358906,
+   "wins": 2396,
+   "losses": 4188,
+   "timeframe": 30
+  },
+  {
+   "wallet_address": "ardinRsN1mNYVeoJWTBsWeYeXvuR9UUDGMsCDKpb6AT",
+   "name": "trunoest",
+   "telegram": null,
+   "twitter": "https://x.com/trunoest",
+   "profit": 3581.208157942623,
+   "wins": 2297,
+   "losses": 1722,
+   "timeframe": 30
+  }
+ ]
+}

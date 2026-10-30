@@ -1,0 +1,34 @@
+{
+  "name": "@copy-trade-vault/indexer",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./upload": "./src/upload.ts"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "test": "tsx --test src/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "directory:refresh": "tsx src/directory-refresh.ts"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.3.0",
+    "@fastify/multipart": "^10.1.2",
+    "@fastify/static": "^10.1.4",
+    "@fastify/websocket": "^11.3.1",
+    "@copy-trade-vault/sdk": "workspace:*",
+    "@solana/web3.js": "^1.99.0",
+    "fastify": "^5.12.5",
+    "sharp": "^0.35.5",
+    "undici": "^7.30.0",
+    "ws": "^8.21.3"
+  },
+  "devDependencies": {
+    "@coral-xyz/anchor": "0.31.1",
+    "@types/node": "^22.10.0",
+    "@types/ws": "^8.18.1",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

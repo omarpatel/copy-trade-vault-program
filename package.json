@@ -1,0 +1,25 @@
+{
+  "name": "copy-trade-vault-program",
+  "private": true,
+  "packageManager": "pnpm@10.13.1",
+  "scripts": {
+    "dev": "node scripts/localnet.mjs start && concurrently --kill-others --names indexer,keeper --prefix-colors cyan,magenta \"pnpm:dev:indexer\" \"pnpm:dev:keeper\"",
+    "dev:indexer": "pnpm --filter @copy-trade-vault/indexer dev",
+    "dev:keeper": "pnpm --filter @copy-trade-vault/watcher dev",
+    "localnet": "node scripts/localnet.mjs",
+    "stop:localnet": "node scripts/localnet.mjs stop",
+    "reset:localnet": "node scripts/localnet.mjs reset",
+    "setup:localnet": "pnpm --filter @copy-trade-vault/scripts run setup",
+    "seed:localnet": "pnpm --filter @copy-trade-vault/scripts run seed",
+    "simulate:localnet": "pnpm --filter @copy-trade-vault/scripts run simulate",
+    "setup:cluster": "pnpm --filter @copy-trade-vault/scripts run setup",
+    "preflight": "pnpm --filter @copy-trade-vault/scripts run preflight",
+    "ops:check": "pnpm --filter @copy-trade-vault/scripts run ops-check",
+    "admin": "pnpm --filter @copy-trade-vault/scripts run admin",
+    "typecheck": "pnpm -r typecheck",
+    "test": "pnpm -r --if-present test"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  }
+}

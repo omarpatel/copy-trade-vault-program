@@ -1,0 +1,42 @@
+{
+ "entries": [
+  {
+   "rank": 1,
+   "userId": "e971fd33-a4ef-407a-aa21-0144302f4e3c",
+   "username": "chairman",
+   "profileImageUrl": "https://socialimages.pump.fun/profile-images/e971fd33-a4ef-407a-aa21-0144302f4e3c/8c4bc745-777c-47b2-8190-7d299bd6bbd9",
+   "isVerified": true,
+   "verifiedBadgeVisible": false,
+   "twitterId": "1180963377406853121",
+   "twitterUrl": "https://x.com/i/user/1180963377406853121",
+   "wallets": [
+    "0x826fc54012f74c0cd7bccc5a6b964686322201ca",
+    "Be24Gbf5KisDk1LcWWZsBn8dvB816By7YzYF5zWZnRR6"
+   ],
+   "walletAddress": "Be24Gbf5KisDk1LcWWZsBn8dvB816By7YzYF5zWZnRR6",
+   "totalPaidUsdc": 271142.860206,
+   "payoutCount": 54,
+   "lastPaidAt": "2026-10-04T16:12:43.573Z"
+  },
+  {
+   "rank": 2,
+   "userId": "2aa1dd90-aa5b-459d-9945-7dc72ec5bd2a",
+   "username": "slingoor",
+   "profileImageUrl": "https://socialimages.pump.fun/profile-images/2aa1dd90-aa5b-459d-9945-7dc72ec5bd2a/9149e85b-0d60-45ce-bf33-834500f44873",
+   "isVerified": true,
+   "verifiedBadgeVisible": false,
+   "twitterId": "1509239489021030405",
+   "twitterUrl": "https://x.com/i/user/1509239489021030405",
+   "wallets": [
+    "0x17e9d5945dcea0e5f51e9915b78e3be71ee0731b",
+    "5YRgrP3mjGzrzirYYN5HAQH19cTYREYwGxW6XRJQUzij"
+   ],
+   "walletAddress": "5YRgrP3mjGzrzirYYN5HAQH19cTYREYwGxW6XRJQUzij",
+   "totalPaidUsdc": 247964.304718,
+   "payoutCount": 54,
+   "lastPaidAt": "2026-10-04T16:12:43.573Z"
+  }
+ ],
+ "totalEarners": 36172,
+ "generatedAt": "2026-10-04T20:08:49.301Z"
+}

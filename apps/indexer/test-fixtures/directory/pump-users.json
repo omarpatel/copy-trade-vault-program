@@ -1,0 +1,40 @@
+[
+ {
+  "address": "5WnAczezsDku4YkJEKW9PUzLm87Wuq6VKczLn8n2YHP2",
+  "userId": "7f26c005-bb43-4f33-bf3f-c1a905ad73a0",
+  "is_pump_user": true,
+  "is_banned": false,
+  "username": "oxr",
+  "profile_image": "https://pump.mypinata.cloud/ipfs/bafybeig6ahkrwcvrndxuwpfl7uy7woijm6oe7sidoujbu6xcbx43i22qvq",
+  "header_image_url": "https://socialimages.pump.fun/profile-images/5WnAczezsDku4YkJEKW9PUzLm87Wuq6VKczLn8n2YHP2/e8402282-549f-4c3a-89fc-eb3ba1eb0fb9",
+  "avatar_decoration": null,
+  "kind": "person",
+  "member_count": 0,
+  "last_username_update_timestamp": null,
+  "following": 280,
+  "followers": 421752,
+  "bio": "+$1.8m on memes, all lost to a hack. consider it a warning and don't give up",
+  "x_username": "oxrxbt",
+  "canonical_svm_wallet": "5WnAczezsDku4YkJEKW9PUzLm87Wuq6VKczLn8n2YHP2",
+  "canonical_evm_wallet": "0x90a51a1b11da0bbf2dceedf1dd87eb8978e0580a"
+ },
+ {
+  "address": "CMxSik1negxei2WxcJwbrZXnb71xQpAdMT1fyshFjWYr",
+  "userId": "b8d3fa7c-889e-4cdb-9963-fbfbb072734c",
+  "is_pump_user": true,
+  "is_banned": false,
+  "username": "Pcsd",
+  "profile_image": "https://socialimages.pump.fun/profile-images/b8d3fa7c-889e-4cdb-9963-fbfbb072734c/2430bbe1-af9f-47ed-95db-b2959a5ee58c",
+  "header_image_url": null,
+  "avatar_decoration": null,
+  "kind": "person",
+  "member_count": 0,
+  "last_username_update_timestamp": 1790028161518,
+  "following": 1,
+  "followers": 206855,
+  "bio": null,
+  "x_username": null,
+  "canonical_svm_wallet": "CMxSik1negxei2WxcJwbrZXnb71xQpAdMT1fyshFjWYr",
+  "canonical_evm_wallet": "0xc9cb7bdf928b5ff11eab5ff9af52820858789699"
+ }
+]

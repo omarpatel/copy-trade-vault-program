@@ -1,0 +1,9 @@
+packages:
+  - "packages/*"
+  - "apps/*"
+  - "scripts"
+onlyBuiltDependencies:
+  - esbuild
+  - bufferutil
+  - utf-8-validate
+  - sharp

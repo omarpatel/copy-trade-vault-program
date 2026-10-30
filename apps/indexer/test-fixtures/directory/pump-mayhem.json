@@ -1,0 +1,22 @@
+{
+ "window": "7d",
+ "items": [
+  {
+   "rank": 1,
+   "address": "6ATnpbwa43DtscAWjiR3uh5bEfpc4mhFpF42F5a5f68T",
+   "realisedPnlUsd": 56166.62060392214,
+   "winRate": 0.3549,
+   "volumeUsd": 2986697.2029598253,
+   "tradeCount": 14263
+  },
+  {
+   "rank": 2,
+   "address": "9YdtQaDhsNwxSJaZ39HLCCMCVjgMNQscbd9f3UbqmFfB",
+   "realisedPnlUsd": 21336.197069970724,
+   "winRate": 0.2784,
+   "volumeUsd": 620200.9334059057,
+   "tradeCount": 1199
+  }
+ ],
+ "updatedAt": 1791144130037
+}

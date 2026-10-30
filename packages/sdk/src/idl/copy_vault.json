@@ -1,0 +1,4146 @@
+{
+  "address": "9R8g8JtEqRAh5yZ4aXbf1mWcfgLq9kAo6fmx93MSK9k7",
+  "metadata": {
+    "name": "copy_vault",
+    "version": "0.1.0",
+    "spec": "0.1.0",
+    "description": "copy-vault: pump.fun coins whose creator fees fund an on-chain vault that copy-trades a target wallet"
+  },
+  "instructions": [
+    {
+      "name": "accept_admin",
+      "docs": [
+        "The proposed admin takes over, after the timelock."
+      ],
+      "discriminator": [
+        112,
+        42,
+        45,
+        90,
+        116,
+        181,
+        13,
+        170
+      ],
+      "accounts": [
+        {
+          "name": "pending_admin",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "burn_platform",
+      "discriminator": [
+        140,
+        172,
+        140,
+        172,
+        12,
+        84,
+        147,
+        195
+      ],
+      "accounts": [
+        {
+          "name": "keeper",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "burn_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  116,
+                  102,
+                  111,
+                  114,
+                  109,
+                  45,
+                  98,
+                  117,
+                  114,
+                  110
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "platform_mint",
+          "writable": true
+        },
+        {
+          "name": "burn_pool_token_account",
+          "writable": true
+        },
+        {
+          "name": "burn_pool_wsol",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "quote_token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "descriptor_idx",
+          "type": "u8"
+        },
+        {
+          "name": "sol_in",
+          "type": "u64"
+        },
+        {
+          "name": "min_tokens_out",
+          "type": "u64"
+        },
+        {
+          "name": "ix_data",
+          "type": "bytes"
+        }
+      ]
+    },
+    {
+      "name": "buyback_burn",
+      "discriminator": [
+        20,
+        254,
+        58,
+        252,
+        209,
+        32,
+        111,
+        97
+      ],
+      "accounts": [
+        {
+          "name": "keeper",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint",
+          "writable": true
+        },
+        {
+          "name": "vault_token_account",
+          "writable": true
+        },
+        {
+          "name": "vault_wsol",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "quote_token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "descriptor_idx",
+          "type": "u8"
+        },
+        {
+          "name": "sol_in",
+          "type": "u64"
+        },
+        {
+          "name": "min_tokens_out",
+          "type": "u64"
+        },
+        {
+          "name": "ix_data",
+          "type": "bytes"
+        }
+      ]
+    },
+    {
+      "name": "cancel_pending",
+      "discriminator": [
+        74,
+        87,
+        109,
+        242,
+        64,
+        192,
+        151,
+        71
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pending",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "pending.id",
+                "account": "PendingChange"
+              }
+            ]
+          }
+        },
+        {
+          "name": "proposer",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "copier_buy",
+      "discriminator": [
+        83,
+        192,
+        185,
+        38,
+        57,
+        16,
+        44,
+        161
+      ],
+      "accounts": [
+        {
+          "name": "keeper",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_mint"
+        },
+        {
+          "name": "position",
+          "docs": [
+            "bump once it exists); created by the program on the first buy."
+          ],
+          "writable": true
+        },
+        {
+          "name": "target"
+        },
+        {
+          "name": "target_token_account"
+        },
+        {
+          "name": "vault_token_account",
+          "writable": true
+        },
+        {
+          "name": "vault_wsol",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "quote_token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "target_idx",
+          "type": "u8"
+        },
+        {
+          "name": "descriptor_idx",
+          "type": "u8"
+        },
+        {
+          "name": "sol_in",
+          "type": "u64"
+        },
+        {
+          "name": "min_tokens_out",
+          "type": "u64"
+        },
+        {
+          "name": "ix_data",
+          "type": "bytes"
+        }
+      ]
+    },
+    {
+      "name": "copier_sell",
+      "discriminator": [
+        17,
+        59,
+        238,
+        145,
+        167,
+        85,
+        194,
+        180
+      ],
+      "accounts": [
+        {
+          "name": "authority",
+          "docs": [
+            "The keeper, or anyone once the keeper heartbeat is older than `keeper_grace_secs` and the",
+            "target holds 0 (then in impact-capped slices, one per slot)."
+          ],
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "burn_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  116,
+                  102,
+                  111,
+                  114,
+                  109,
+                  45,
+                  98,
+                  117,
+                  114,
+                  110
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "token_mint"
+        },
+        {
+          "name": "position",
+          "docs": [
+            "`[\"position\", copier.mint, token_mint]`: the open position being sold."
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  111,
+                  115,
+                  105,
+                  116,
+                  105,
+                  111,
+                  110
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              },
+              {
+                "kind": "account",
+                "path": "token_mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "target"
+        },
+        {
+          "name": "target_token_account"
+        },
+        {
+          "name": "vault_token_account",
+          "writable": true
+        },
+        {
+          "name": "vault_wsol",
+          "writable": true
+        },
+        {
+          "name": "token_program"
+        },
+        {
+          "name": "quote_token_program"
+        },
+        {
+          "name": "associated_token_program",
+          "address": "ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        },
+        {
+          "name": "instructions",
+          "address": "Sysvar1nstructions1111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "target_idx",
+          "type": "u8"
+        },
+        {
+          "name": "descriptor_idx",
+          "type": "u8"
+        },
+        {
+          "name": "tokens_in",
+          "type": "u64"
+        },
+        {
+          "name": "min_sol_out",
+          "type": "u64"
+        },
+        {
+          "name": "ix_data",
+          "type": "bytes"
+        }
+      ]
+    },
+    {
+      "name": "deposit",
+      "docs": [
+        "Anyone adds capital (not profit) to a vault."
+      ],
+      "discriminator": [
+        242,
+        35,
+        198,
+        137,
+        82,
+        225,
+        242,
+        182
+      ],
+      "accounts": [
+        {
+          "name": "depositor",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault_wsol"
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "lamports",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "discard_pending",
+      "docs": [
+        "Anyone closes a superseded or expired change (rent to its proposer)."
+      ],
+      "discriminator": [
+        35,
+        68,
+        11,
+        2,
+        188,
+        246,
+        152,
+        253
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pending",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "pending.id",
+                "account": "PendingChange"
+              }
+            ]
+          }
+        },
+        {
+          "name": "proposer",
+          "writable": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "execute_pending",
+      "docs": [
+        "Anyone, once the change's timelock has passed."
+      ],
+      "discriminator": [
+        207,
+        36,
+        5,
+        220,
+        230,
+        106,
+        57,
+        181
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pending",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "pending.id",
+                "account": "PendingChange"
+              }
+            ]
+          }
+        },
+        {
+          "name": "proposer",
+          "writable": true
+        },
+        {
+          "name": "copier",
+          "docs": [
+            "The Index copier of an `IndexTargets` change (omit for other kinds)."
+          ],
+          "writable": true,
+          "optional": true
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "fund_platform_burn",
+      "docs": [
+        "Moves the copier's pending 25% profit share to the platform token burn pool."
+      ],
+      "discriminator": [
+        163,
+        119,
+        190,
+        132,
+        133,
+        239,
+        18,
+        184
+      ],
+      "accounts": [
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault_wsol"
+        },
+        {
+          "name": "burn_pool",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  116,
+                  102,
+                  111,
+                  114,
+                  109,
+                  45,
+                  98,
+                  117,
+                  114,
+                  110
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "initialize_config",
+      "docs": [
+        "Once, by the program's upgrade authority: default params, the seeded venue whitelist, the",
+        "admin timelock (60 s – 7 days) and the funded platform-token burn pool."
+      ],
+      "discriminator": [
+        208,
+        127,
+        21,
+        1,
+        194,
+        190,
+        196,
+        70
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "program_data",
+          "docs": [
+            "The program's ProgramData: only its upgrade authority (the deployer) can initialize."
+          ],
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  125,
+                  12,
+                  28,
+                  205,
+                  133,
+                  182,
+                  44,
+                  161,
+                  225,
+                  95,
+                  131,
+                  126,
+                  85,
+                  160,
+                  64,
+                  82,
+                  79,
+                  32,
+                  131,
+                  171,
+                  39,
+                  132,
+                  9,
+                  104,
+                  152,
+                  169,
+                  12,
+                  152,
+                  164,
+                  30,
+                  176,
+                  68
+                ]
+              }
+            ],
+            "program": {
+              "kind": "const",
+              "value": [
+                2,
+                168,
+                246,
+                145,
+                78,
+                136,
+                161,
+                176,
+                226,
+                16,
+                21,
+                62,
+                247,
+                99,
+                174,
+                43,
+                0,
+                194,
+                185,
+                61,
+                22,
+                193,
+                36,
+                210,
+                192,
+                83,
+                122,
+                16,
+                4,
+                128,
+                0,
+                0
+              ]
+            }
+          }
+        },
+        {
+          "name": "burn_pool",
+          "docs": [
+            "the platform token burn pool: system-owned, zero data; funded to rent here so it can receive any share."
+          ],
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  108,
+                  97,
+                  116,
+                  102,
+                  111,
+                  114,
+                  109,
+                  45,
+                  98,
+                  117,
+                  114,
+                  110
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "keeper",
+          "type": "pubkey"
+        },
+        {
+          "name": "timelock_secs",
+          "type": "i64"
+        }
+      ]
+    },
+    {
+      "name": "keeper_heartbeat",
+      "docs": [
+        "The keeper's liveness signal (every keeper-signed trade or burn also counts)."
+      ],
+      "discriminator": [
+        144,
+        217,
+        237,
+        161,
+        10,
+        157,
+        34,
+        96
+      ],
+      "accounts": [
+        {
+          "name": "keeper",
+          "signer": true
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "pause_keeper",
+      "docs": [
+        "Instant: removes the keeper."
+      ],
+      "discriminator": [
+        155,
+        213,
+        197,
+        244,
+        116,
+        255,
+        251,
+        45
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "propose_admin",
+      "discriminator": [
+        121,
+        214,
+        199,
+        212,
+        87,
+        39,
+        117,
+        234
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "new_admin",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "propose_descriptors",
+      "docs": [
+        "Queues a venue whitelist change."
+      ],
+      "discriminator": [
+        231,
+        129,
+        42,
+        155,
+        159,
+        63,
+        174,
+        125
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pending",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config.next_change_id",
+                "account": "Config"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "descriptors",
+          "type": {
+            "vec": {
+              "defined": {
+                "name": "TradeDescriptor"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "propose_index_targets",
+      "docs": [
+        "Queues an Index copier's new target list."
+      ],
+      "discriminator": [
+        1,
+        96,
+        144,
+        18,
+        108,
+        73,
+        224,
+        19
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "pending",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config.next_change_id",
+                "account": "Config"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "targets",
+          "type": {
+            "vec": "pubkey"
+          }
+        }
+      ]
+    },
+    {
+      "name": "propose_keeper",
+      "docs": [
+        "Queues a keeper change (executable after the timelock)."
+      ],
+      "discriminator": [
+        35,
+        219,
+        88,
+        80,
+        36,
+        86,
+        9,
+        93
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pending",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config.next_change_id",
+                "account": "Config"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "keeper",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "propose_params",
+      "docs": [
+        "Queues a parameter change (validated against the ranges now and at execution)."
+      ],
+      "discriminator": [
+        94,
+        141,
+        220,
+        182,
+        171,
+        53,
+        52,
+        182
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "pending",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  112,
+                  101,
+                  110,
+                  100,
+                  105,
+                  110,
+                  103
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "config.next_change_id",
+                "account": "Config"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "params",
+          "type": {
+            "defined": {
+              "name": "Params"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "register_copier",
+      "docs": [
+        "Last instruction of the launch tx: checks the fee-sharing split",
+        "`[target trader_bps, vault 10000 − trader_bps]` is final and creates the copier."
+      ],
+      "discriminator": [
+        129,
+        9,
+        69,
+        218,
+        155,
+        139,
+        238,
+        218
+      ],
+      "accounts": [
+        {
+          "name": "launcher",
+          "writable": true,
+          "signer": true
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "bonding_curve"
+        },
+        {
+          "name": "sharing_config"
+        },
+        {
+          "name": "target"
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "trader_bps",
+          "type": "u16"
+        }
+      ]
+    },
+    {
+      "name": "register_index",
+      "docs": [
+        "Admin: an index copier (vault takes 100% of creator fees) copying up to 16 wallets."
+      ],
+      "discriminator": [
+        236,
+        137,
+        25,
+        129,
+        33,
+        119,
+        102,
+        44
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "writable": true,
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "mint"
+        },
+        {
+          "name": "bonding_curve"
+        },
+        {
+          "name": "sharing_config"
+        },
+        {
+          "name": "vault",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "mint"
+              }
+            ]
+          }
+        },
+        {
+          "name": "system_program",
+          "address": "11111111111111111111111111111111"
+        }
+      ],
+      "args": [
+        {
+          "name": "targets",
+          "type": {
+            "vec": "pubkey"
+          }
+        }
+      ]
+    },
+    {
+      "name": "set_platform_mint",
+      "docs": [
+        "Once: names the registered Index copier whose coin is the platform token."
+      ],
+      "discriminator": [
+        61,
+        192,
+        252,
+        228,
+        36,
+        149,
+        141,
+        59
+      ],
+      "accounts": [
+        {
+          "name": "admin",
+          "signer": true,
+          "relations": [
+            "config"
+          ]
+        },
+        {
+          "name": "config",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  110,
+                  102,
+                  105,
+                  103
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "name": "copier",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "mint",
+          "type": "pubkey"
+        }
+      ]
+    },
+    {
+      "name": "sync",
+      "docs": [
+        "Books lamports that reached the vault without the program (creator fees) as fee income."
+      ],
+      "discriminator": [
+        4,
+        219,
+        40,
+        164,
+        21,
+        157,
+        189,
+        88
+      ],
+      "accounts": [
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault",
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  118,
+                  97,
+                  117,
+                  108,
+                  116
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        },
+        {
+          "name": "vault_wsol"
+        }
+      ],
+      "args": []
+    },
+    {
+      "name": "unverify_trader",
+      "discriminator": [
+        39,
+        92,
+        133,
+        128,
+        179,
+        199,
+        239,
+        255
+      ],
+      "accounts": [
+        {
+          "name": "target",
+          "signer": true
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "target_idx",
+          "type": "u8"
+        }
+      ]
+    },
+    {
+      "name": "verify_trader",
+      "discriminator": [
+        19,
+        110,
+        57,
+        187,
+        114,
+        218,
+        133,
+        240
+      ],
+      "accounts": [
+        {
+          "name": "target",
+          "signer": true
+        },
+        {
+          "name": "copier",
+          "writable": true,
+          "pda": {
+            "seeds": [
+              {
+                "kind": "const",
+                "value": [
+                  99,
+                  111,
+                  112,
+                  105,
+                  101,
+                  114
+                ]
+              },
+              {
+                "kind": "account",
+                "path": "copier.mint",
+                "account": "Copier"
+              }
+            ]
+          }
+        }
+      ],
+      "args": [
+        {
+          "name": "target_idx",
+          "type": "u8"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Config",
+      "discriminator": [
+        155,
+        12,
+        170,
+        224,
+        30,
+        250,
+        204,
+        130
+      ]
+    },
+    {
+      "name": "Copier",
+      "discriminator": [
+        191,
+        101,
+        65,
+        98,
+        153,
+        22,
+        173,
+        6
+      ]
+    },
+    {
+      "name": "PendingChange",
+      "discriminator": [
+        232,
+        183,
+        176,
+        196,
+        15,
+        195,
+        115,
+        147
+      ]
+    },
+    {
+      "name": "Position",
+      "discriminator": [
+        170,
+        188,
+        143,
+        228,
+        122,
+        64,
+        247,
+        208
+      ]
+    }
+  ],
+  "events": [
+    {
+      "name": "BuybackBurned",
+      "discriminator": [
+        186,
+        84,
+        241,
+        202,
+        152,
+        185,
+        0,
+        115
+      ]
+    },
+    {
+      "name": "ChangeCancelled",
+      "discriminator": [
+        139,
+        179,
+        97,
+        81,
+        214,
+        21,
+        119,
+        93
+      ]
+    },
+    {
+      "name": "ChangeDiscarded",
+      "discriminator": [
+        217,
+        50,
+        230,
+        94,
+        150,
+        101,
+        130,
+        139
+      ]
+    },
+    {
+      "name": "ChangeExecuted",
+      "discriminator": [
+        50,
+        115,
+        8,
+        12,
+        139,
+        8,
+        191,
+        26
+      ]
+    },
+    {
+      "name": "ChangeInvalidated",
+      "discriminator": [
+        122,
+        154,
+        108,
+        124,
+        90,
+        117,
+        46,
+        244
+      ]
+    },
+    {
+      "name": "ChangeProposed",
+      "discriminator": [
+        170,
+        10,
+        10,
+        8,
+        244,
+        196,
+        146,
+        151
+      ]
+    },
+    {
+      "name": "CopierBuy",
+      "discriminator": [
+        247,
+        0,
+        7,
+        73,
+        43,
+        156,
+        101,
+        17
+      ]
+    },
+    {
+      "name": "CopierRegistered",
+      "discriminator": [
+        181,
+        213,
+        160,
+        176,
+        156,
+        125,
+        188,
+        88
+      ]
+    },
+    {
+      "name": "CopierSell",
+      "discriminator": [
+        73,
+        29,
+        246,
+        147,
+        113,
+        245,
+        247,
+        152
+      ]
+    },
+    {
+      "name": "Deposited",
+      "discriminator": [
+        111,
+        141,
+        26,
+        45,
+        161,
+        35,
+        100,
+        57
+      ]
+    },
+    {
+      "name": "FeesSynced",
+      "discriminator": [
+        41,
+        98,
+        204,
+        192,
+        243,
+        3,
+        53,
+        218
+      ]
+    },
+    {
+      "name": "IndexTargetsSet",
+      "discriminator": [
+        222,
+        193,
+        110,
+        5,
+        23,
+        152,
+        127,
+        96
+      ]
+    },
+    {
+      "name": "KeeperPaused",
+      "discriminator": [
+        252,
+        14,
+        240,
+        37,
+        119,
+        137,
+        145,
+        167
+      ]
+    },
+    {
+      "name": "ParamsUpdated",
+      "discriminator": [
+        2,
+        163,
+        138,
+        99,
+        135,
+        11,
+        136,
+        169
+      ]
+    },
+    {
+      "name": "PlatformBurned",
+      "discriminator": [
+        107,
+        141,
+        79,
+        19,
+        134,
+        83,
+        255,
+        101
+      ]
+    },
+    {
+      "name": "ProfitSplit",
+      "discriminator": [
+        148,
+        113,
+        189,
+        160,
+        79,
+        151,
+        232,
+        187
+      ]
+    },
+    {
+      "name": "TraderVerified",
+      "discriminator": [
+        48,
+        45,
+        155,
+        166,
+        48,
+        166,
+        196,
+        79
+      ]
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "NotUpgradeAuthority",
+      "msg": "Signer is not the program upgrade authority"
+    },
+    {
+      "code": 6001,
+      "name": "NotAdmin",
+      "msg": "Signer is not the config admin"
+    },
+    {
+      "code": 6002,
+      "name": "NotPendingAdmin",
+      "msg": "Signer is not the pending admin"
+    },
+    {
+      "code": 6003,
+      "name": "NotKeeper",
+      "msg": "Signer is not the keeper"
+    },
+    {
+      "code": 6004,
+      "name": "ParamOutOfRange",
+      "msg": "Parameter outside its allowed range"
+    },
+    {
+      "code": 6005,
+      "name": "TooManyDescriptors",
+      "msg": "Too many trade descriptors"
+    },
+    {
+      "code": 6006,
+      "name": "DescriptorProgramNotAllowed",
+      "msg": "Descriptor targets a program other than pump or pump_amm"
+    },
+    {
+      "code": 6007,
+      "name": "DescriptorDiscForbidden",
+      "msg": "Descriptor discriminator is never allowed (create/extend/volume accumulator/migrate/deposit/withdraw/admin)"
+    },
+    {
+      "code": 6008,
+      "name": "DescriptorIndices",
+      "msg": "Descriptor account indices are inconsistent or min_accounts exceeds 40"
+    },
+    {
+      "code": 6009,
+      "name": "PlatformMintAlreadySet",
+      "msg": "the platform token mint already set"
+    },
+    {
+      "code": 6010,
+      "name": "PlatformMintNotIndex",
+      "msg": "the platform token mint must be a registered Index copier"
+    },
+    {
+      "code": 6011,
+      "name": "DescriptorsIncomplete",
+      "msg": "Descriptors must keep at least one Buy and one Sell descriptor for both the curve and the pool"
+    },
+    {
+      "code": 6012,
+      "name": "TimelockOutOfRange",
+      "msg": "Timelock must be between 60 seconds and 7 days"
+    },
+    {
+      "code": 6013,
+      "name": "TimelockNotElapsed",
+      "msg": "The change's timelock has not elapsed"
+    },
+    {
+      "code": 6014,
+      "name": "PendingChangeInvalid",
+      "msg": "Pending change payload does not match its kind or accounts"
+    },
+    {
+      "code": 6015,
+      "name": "TraderBpsOutOfRange",
+      "msg": "Trader cut must be between 100 and 2500 bps"
+    },
+    {
+      "code": 6016,
+      "name": "SharingConfigMismatch",
+      "msg": "Sharing config is not the canonical pump_fees PDA for this mint"
+    },
+    {
+      "code": 6017,
+      "name": "SharingConfigInvalid",
+      "msg": "Sharing config account is not a pump_fees SharingConfig"
+    },
+    {
+      "code": 6018,
+      "name": "SharingConfigVersion",
+      "msg": "Sharing config version must be 2"
+    },
+    {
+      "code": 6019,
+      "name": "SharingConfigNotActive",
+      "msg": "Sharing config is not active"
+    },
+    {
+      "code": 6020,
+      "name": "SharingConfigAdminNotRevoked",
+      "msg": "Sharing config admin is not revoked (split not immutable)"
+    },
+    {
+      "code": 6021,
+      "name": "ShareholdersMismatch",
+      "msg": "Shareholders must be exactly [target X, vault 10000-X] (index: [vault 10000])"
+    },
+    {
+      "code": 6022,
+      "name": "BondingCurveMismatch",
+      "msg": "Bonding curve is not the canonical pump PDA for this mint"
+    },
+    {
+      "code": 6023,
+      "name": "BondingCurveInvalid",
+      "msg": "Bonding curve account is not a pump BondingCurve"
+    },
+    {
+      "code": 6024,
+      "name": "CreatorNotSharingConfig",
+      "msg": "Bonding curve creator is not the sharing config"
+    },
+    {
+      "code": 6025,
+      "name": "CurveComplete",
+      "msg": "Bonding curve already complete"
+    },
+    {
+      "code": 6026,
+      "name": "MayhemCoin",
+      "msg": "Mayhem-mode coins are not supported"
+    },
+    {
+      "code": 6027,
+      "name": "CashbackCoin",
+      "msg": "Cashback coins are not supported"
+    },
+    {
+      "code": 6028,
+      "name": "HolderRewardCoin",
+      "msg": "Holder-reward coins are not supported"
+    },
+    {
+      "code": 6029,
+      "name": "NotSolQuoted",
+      "msg": "Only SOL-quoted coins are supported"
+    },
+    {
+      "code": 6030,
+      "name": "MintNotToken2022",
+      "msg": "Mint is not a Token-2022 mint"
+    },
+    {
+      "code": 6031,
+      "name": "MintUnsafe",
+      "msg": "Mint has an authority or an extension that could block transfers or burns"
+    },
+    {
+      "code": 6032,
+      "name": "TargetInvalid",
+      "msg": "Target must be a system-owned, non-executable wallet"
+    },
+    {
+      "code": 6033,
+      "name": "VaultInvalid",
+      "msg": "Vault must be the system-owned, zero-data vault PDA"
+    },
+    {
+      "code": 6034,
+      "name": "InvalidTargets",
+      "msg": "Index target list is empty, too long or has duplicates"
+    },
+    {
+      "code": 6035,
+      "name": "NotIndex",
+      "msg": "Not an Index copier"
+    },
+    {
+      "code": 6036,
+      "name": "TargetHasOpenPositions",
+      "msg": "Cannot remove a target that still has open positions"
+    },
+    {
+      "code": 6037,
+      "name": "TargetIndex",
+      "msg": "Target index out of range"
+    },
+    {
+      "code": 6038,
+      "name": "TargetMismatch",
+      "msg": "Target account does not match the copier's target"
+    },
+    {
+      "code": 6039,
+      "name": "TargetTokenAccount",
+      "msg": "Target token account is not the canonical ATA"
+    },
+    {
+      "code": 6040,
+      "name": "DescriptorIndex",
+      "msg": "Descriptor index out of range"
+    },
+    {
+      "code": 6041,
+      "name": "DescriptorSide",
+      "msg": "Descriptor side does not match the instruction"
+    },
+    {
+      "code": 6042,
+      "name": "DiscriminatorMismatch",
+      "msg": "Instruction data does not start with the descriptor's discriminator"
+    },
+    {
+      "code": 6043,
+      "name": "NotEnoughAccounts",
+      "msg": "Not enough venue accounts for this descriptor"
+    },
+    {
+      "code": 6044,
+      "name": "VenueProgram",
+      "msg": "Venue program account missing or not the descriptor's program"
+    },
+    {
+      "code": 6045,
+      "name": "UserMismatch",
+      "msg": "remaining[user_idx] is not the trading PDA"
+    },
+    {
+      "code": 6046,
+      "name": "UserElsewhere",
+      "msg": "The trading PDA appears in the venue accounts outside user_idx"
+    },
+    {
+      "code": 6047,
+      "name": "MintMismatch",
+      "msg": "remaining[base_mint_idx] is not the traded mint"
+    },
+    {
+      "code": 6048,
+      "name": "VenueMismatch",
+      "msg": "Venue account is not the canonical bonding curve / pool for the mint"
+    },
+    {
+      "code": 6049,
+      "name": "VenueInvalid",
+      "msg": "Venue account is invalid, not SOL-quoted, mayhem or the wrong kind"
+    },
+    {
+      "code": 6050,
+      "name": "ForeignVaultTokenAccount",
+      "msg": "A writable token account owned by the trading PDA is not the traded mint / wSOL account"
+    },
+    {
+      "code": 6051,
+      "name": "OwnMint",
+      "msg": "Cannot copy-trade the copier's own coin"
+    },
+    {
+      "code": 6052,
+      "name": "NoTargetIncrease",
+      "msg": "Target balance did not increase"
+    },
+    {
+      "code": 6053,
+      "name": "SignalTooSmall",
+      "msg": "Target buy is below the minimum signal"
+    },
+    {
+      "code": 6054,
+      "name": "ExceedsSignal",
+      "msg": "Trade exceeds signal x signal_multiple"
+    },
+    {
+      "code": 6055,
+      "name": "ExceedsTradeCap",
+      "msg": "Trade exceeds max_trade_bps of equity"
+    },
+    {
+      "code": 6056,
+      "name": "ExceedsPositionCap",
+      "msg": "Position would exceed max_position_bps of equity"
+    },
+    {
+      "code": 6057,
+      "name": "ExceedsImpact",
+      "msg": "Trade exceeds max_impact_bps of the venue's real quote reserves"
+    },
+    {
+      "code": 6058,
+      "name": "TradeTooSmall",
+      "msg": "Trade below min_trade_lamports"
+    },
+    {
+      "code": 6059,
+      "name": "BelowVaultFloor",
+      "msg": "Trade would take free SOL below the vault floor"
+    },
+    {
+      "code": 6060,
+      "name": "TooManyPositions",
+      "msg": "Too many open positions"
+    },
+    {
+      "code": 6061,
+      "name": "PositionTargetMismatch",
+      "msg": "Position belongs to another target"
+    },
+    {
+      "code": 6062,
+      "name": "PositionInvalid",
+      "msg": "Position account is invalid"
+    },
+    {
+      "code": 6063,
+      "name": "NoPosition",
+      "msg": "No open position for this mint"
+    },
+    {
+      "code": 6064,
+      "name": "SlippageTokens",
+      "msg": "Venue returned fewer tokens than the floor"
+    },
+    {
+      "code": 6065,
+      "name": "SlippageSol",
+      "msg": "Venue returned less SOL than the floor"
+    },
+    {
+      "code": 6066,
+      "name": "Overspent",
+      "msg": "Venue spent more than sol_in plus the rent allowance"
+    },
+    {
+      "code": 6067,
+      "name": "SellAmountMismatch",
+      "msg": "Venue sold a different amount of tokens than tokens_in"
+    },
+    {
+      "code": 6068,
+      "name": "SellNotAllowed",
+      "msg": "Sell exceeds the target-proportional allowance"
+    },
+    {
+      "code": 6069,
+      "name": "SellNotPermitted",
+      "msg": "Only the keeper may sell before the grace period ends while the target holds tokens"
+    },
+    {
+      "code": 6070,
+      "name": "ZeroAmount",
+      "msg": "Amount must be greater than zero"
+    },
+    {
+      "code": 6071,
+      "name": "ExceedsBuybackPool",
+      "msg": "Exceeds the buyback pool"
+    },
+    {
+      "code": 6072,
+      "name": "BuybackTooSoon",
+      "msg": "buyback_burn called again within 60 seconds"
+    },
+    {
+      "code": 6073,
+      "name": "ExceedsBurnPool",
+      "msg": "Burn pool does not hold enough SOL"
+    },
+    {
+      "code": 6074,
+      "name": "PlatformMintNotSet",
+      "msg": "the platform token mint not set"
+    },
+    {
+      "code": 6075,
+      "name": "AccountingBroken",
+      "msg": "Vault balance is below what the program accounted (lamports left without the program)"
+    },
+    {
+      "code": 6076,
+      "name": "TokenAccountMismatch",
+      "msg": "Token account is not the canonical ATA"
+    },
+    {
+      "code": 6077,
+      "name": "VenueTouchedInTx",
+      "msg": "Another instruction in this transaction touches a venue or is not allowed next to a copy-vault trade"
+    },
+    {
+      "code": 6078,
+      "name": "NotTopLevel",
+      "msg": "copy-vault trades must be top-level instructions, not CPIs"
+    },
+    {
+      "code": 6079,
+      "name": "SpendWindowExceeded",
+      "msg": "Buy would exceed the copier's spend limit for the current window"
+    },
+    {
+      "code": 6080,
+      "name": "PublicSellRateLimited",
+      "msg": "Only one permissionless sell per copier per slot"
+    },
+    {
+      "code": 6081,
+      "name": "PlatformBurnTooSoon",
+      "msg": "burn_platform called again within 60 seconds"
+    },
+    {
+      "code": 6082,
+      "name": "MathOverflow",
+      "msg": "Arithmetic overflow"
+    },
+    {
+      "code": 6083,
+      "name": "PendingChangeSuperseded",
+      "msg": "A newer proposal of the same kind (or a keeper pause / admin handover) replaced this change"
+    },
+    {
+      "code": 6084,
+      "name": "PendingChangeExpired",
+      "msg": "The change's execution window has passed"
+    },
+    {
+      "code": 6085,
+      "name": "PendingChangeLive",
+      "msg": "The change is neither superseded nor expired"
+    },
+    {
+      "code": 6086,
+      "name": "DescriptorsDropProvenExit",
+      "msg": "Each venue must keep a Sell descriptor identical to a proven one of the current list"
+    }
+  ],
+  "types": [
+    {
+      "name": "BuybackBurned",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "sol_in",
+            "type": "u64"
+          },
+          {
+            "name": "tokens_burned",
+            "type": "u64"
+          },
+          {
+            "name": "total_burned",
+            "type": "u64"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChangeCancelled",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "ChangeKind"
+              }
+            }
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChangeDiscarded",
+      "docs": [
+        "A superseded or expired change's account was closed (`discard_pending`, permissionless)."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "ChangeKind"
+              }
+            }
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChangeExecuted",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "ChangeKind"
+              }
+            }
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChangeInvalidated",
+      "docs": [
+        "Change `id` can no longer execute (a newer proposal of its kind, a keeper pause or an admin",
+        "handover). Its account stays until `discard_pending` / `cancel_pending`."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "ChangeKind"
+              }
+            }
+          },
+          {
+            "name": "reason",
+            "type": {
+              "defined": {
+                "name": "InvalidationReason"
+              }
+            }
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChangeKind",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Keeper"
+          },
+          {
+            "name": "Params"
+          },
+          {
+            "name": "Descriptors"
+          },
+          {
+            "name": "IndexTargets"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ChangeProposed",
+      "docs": [
+        "An admin change was queued (`propose_*`); executable by anyone from `eta` until `expires_at`",
+        "unless superseded first."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "ChangeKind"
+              }
+            }
+          },
+          {
+            "name": "eta",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "type": "i64"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Config",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "pending_admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "keeper",
+            "type": "pubkey"
+          },
+          {
+            "name": "platform_mint",
+            "docs": [
+              "the platform token; `Pubkey::default()` until `set_platform_mint` (once)."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "params",
+            "type": {
+              "defined": {
+                "name": "Params"
+              }
+            }
+          },
+          {
+            "name": "descriptors",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "TradeDescriptor"
+                }
+              }
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "burn_pool_bump",
+            "type": "u8"
+          },
+          {
+            "name": "platform_burned",
+            "docs": [
+              "the platform token tokens the burn pool bought and burned (`burn_platform`)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "platform_burn_spent",
+            "docs": [
+              "Lamports the burn pool spent on those buys."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "timelock_secs",
+            "docs": [
+              "Seconds between an admin proposal and its earliest execution (fixed at initialization)."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "next_change_id",
+            "docs": [
+              "Id of the next `PendingChange`."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "pending_admin_eta",
+            "docs": [
+              "Earliest time `accept_admin` may run for `pending_admin`."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "keeper_heartbeat_ts",
+            "docs": [
+              "Last keeper-signed instruction (any trade, burn or `keeper_heartbeat`)."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "last_platform_burn_ts",
+            "docs": [
+              "Last `burn_platform`."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "latest_change_ids",
+            "docs": [
+              "Per `ChangeKind` (in enum order): the id of the only proposal of that kind that may",
+              "execute, or `NO_CHANGE`. A newer proposal supersedes the older one; `pause_keeper` clears the",
+              "Keeper entry, `accept_admin` clears all of them."
+            ],
+            "type": {
+              "array": [
+                "u64",
+                4
+              ]
+            }
+          },
+          {
+            "name": "descriptors_proven",
+            "docs": [
+              "Bit i: `descriptors[i]` is proven (seeded, or a trade through it succeeded)."
+            ],
+            "type": "u32"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Copier",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "launcher",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "CopierKind"
+              }
+            }
+          },
+          {
+            "name": "targets",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "trader_bps",
+            "type": "u16"
+          },
+          {
+            "name": "verified",
+            "docs": [
+              "Bit i set: targets[i] signed `verify_trader`."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "vault_bump",
+            "type": "u8"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          },
+          {
+            "name": "created_at",
+            "type": "i64"
+          },
+          {
+            "name": "sharing_config",
+            "type": "pubkey"
+          },
+          {
+            "name": "accounted_lamports",
+            "docs": [
+              "Vault lamports + vault wSOL the program knows about; anything above is fee income (`sync`)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "fees_in",
+            "type": "u64"
+          },
+          {
+            "name": "capital_in",
+            "type": "u64"
+          },
+          {
+            "name": "open_cost",
+            "docs": [
+              "Cost basis of all open positions (lamports, rent included)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "open_positions",
+            "type": "u8"
+          },
+          {
+            "name": "realized_pnl",
+            "type": "i64"
+          },
+          {
+            "name": "hwm",
+            "type": "i64"
+          },
+          {
+            "name": "buyback_pool",
+            "docs": [
+              "Earmarked for buying back & burning the copier's own coin (75% of profit above the HWM)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "platform_sent",
+            "docs": [
+              "Lamports sent to the platform token burn pool (25% of profit above the HWM)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "burned",
+            "docs": [
+              "Own-coin tokens bought back and burned."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "buyback_spent",
+            "docs": [
+              "Lamports spent on own-coin buybacks."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "trades",
+            "type": "u64"
+          },
+          {
+            "name": "last_keeper_ts",
+            "type": "i64"
+          },
+          {
+            "name": "graduated_pool",
+            "docs": [
+              "Canonical PumpSwap pool of the own coin once a buyback has seen it graduated."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "platform_pending",
+            "docs": [
+              "the platform token share not yet moved to the burn pool (`fund_platform_burn`)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "last_buyback_ts",
+            "type": "i64"
+          },
+          {
+            "name": "target_positions",
+            "docs": [
+              "Open positions per target index (parallel to `targets`)."
+            ],
+            "type": {
+              "array": [
+                "u8",
+                16
+              ]
+            }
+          },
+          {
+            "name": "window_start",
+            "docs": [
+              "Start of the current buy spend window."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "window_spent",
+            "docs": [
+              "Lamports `copier_buy` spent in the current window."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "window_equity",
+            "docs": [
+              "Equity at the start of the current window (the window cap's base)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "last_public_sell_slot",
+            "docs": [
+              "Slot of the last permissionless `copier_sell` (one slice per slot)."
+            ],
+            "type": "u64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CopierBuy",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "target",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "venue",
+            "type": {
+              "defined": {
+                "name": "Venue"
+              }
+            }
+          },
+          {
+            "name": "sol_in",
+            "docs": [
+              "Lamports the buy cost the vault (venue spend plus any rent it paid), booked as cost."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "tokens_out",
+            "type": "u64"
+          },
+          {
+            "name": "target_balance",
+            "type": "u64"
+          },
+          {
+            "name": "signal_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "equity",
+            "docs": [
+              "Vault equity before the buy."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CopierKind",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Single"
+          },
+          {
+            "name": "Index"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CopierRegistered",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "launcher",
+            "type": "pubkey"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "CopierKind"
+              }
+            }
+          },
+          {
+            "name": "targets",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "trader_bps",
+            "type": "u16"
+          },
+          {
+            "name": "sharing_config",
+            "type": "pubkey"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "CopierSell",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "target",
+            "type": "pubkey"
+          },
+          {
+            "name": "token_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "venue",
+            "type": {
+              "defined": {
+                "name": "Venue"
+              }
+            }
+          },
+          {
+            "name": "tokens_in",
+            "type": "u64"
+          },
+          {
+            "name": "sol_out",
+            "docs": [
+              "Lamports back on the vault: venue proceeds plus rent refunded on a closing sell."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "cost_removed",
+            "type": "u64"
+          },
+          {
+            "name": "pnl",
+            "type": "i64"
+          },
+          {
+            "name": "realized_pnl",
+            "type": "i64"
+          },
+          {
+            "name": "hwm",
+            "type": "i64"
+          },
+          {
+            "name": "forced",
+            "docs": [
+              "Exit by max-hold or by a non-keeper after the keeper grace period."
+            ],
+            "type": "bool"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Deposited",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "from",
+            "type": "pubkey"
+          },
+          {
+            "name": "lamports",
+            "type": "u64"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FeesSynced",
+      "docs": [
+        "Lamports found on the vault that the program did not move itself (creator fees)."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "lamports",
+            "type": "u64"
+          },
+          {
+            "name": "total",
+            "docs": [
+              "`fees_in` after booking."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "IndexTargetsSet",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "targets",
+            "type": {
+              "vec": "pubkey"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "name": "InvalidationReason",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Superseded"
+          },
+          {
+            "name": "KeeperPaused"
+          },
+          {
+            "name": "AdminChanged"
+          }
+        ]
+      }
+    },
+    {
+      "name": "KeeperPaused",
+      "docs": [
+        "The admin removed the keeper instantly (`pause_keeper`); a new one needs a timelocked",
+        "`propose_keeper`."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "keeper",
+            "type": "pubkey"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Params",
+      "docs": [
+        "Admin-settable trading parameters; `validate` enforces the two-sided ranges in",
+        "`constants.rs`. Changed only through the timelocked `propose_params` → `execute_pending`."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "max_trade_bps",
+            "docs": [
+              "Max lamports per buy, in bps of vault equity."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "max_position_bps",
+            "docs": [
+              "Max cost basis per traded mint, in bps of vault equity."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "max_open_positions",
+            "type": "u8"
+          },
+          {
+            "name": "min_trade_lamports",
+            "type": "u64"
+          },
+          {
+            "name": "min_signal_lamports",
+            "docs": [
+              "Min (target token increase × spot price) for a buy to count as a signal."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "signal_multiple_bps",
+            "docs": [
+              "A vault buy may spend at most this multiple (bps) of the signal."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "max_impact_bps",
+            "docs": [
+              "Max lamports per buy in bps of the venue's real quote reserves."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "slippage_bps",
+            "docs": [
+              "Program-side floor: fills must reach (10000 − slippage_bps) of the fee-free quote."
+            ],
+            "type": "u16"
+          },
+          {
+            "name": "vault_floor_lamports",
+            "docs": [
+              "Free SOL a buy may never spend below."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "max_hold_secs",
+            "docs": [
+              "After this long a position may be exited regardless of the target."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "keeper_grace_secs",
+            "docs": [
+              "After this long without a keeper heartbeat (`Config.keeper_heartbeat_ts`), exits are",
+              "permissionless for positions whose target holds 0, in impact-capped slices."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "spend_window_secs",
+            "docs": [
+              "Length of a copier's buy spend window."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "max_window_spend_bps",
+            "docs": [
+              "Max lamports `copier_buy` may spend per window, in bps of equity at the window's start."
+            ],
+            "type": "u16"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ParamsUpdated",
+      "docs": [
+        "Any config change (params, keeper, descriptors, admin handover, the platform token mint)."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "params",
+            "type": {
+              "defined": {
+                "name": "Params"
+              }
+            }
+          },
+          {
+            "name": "admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "pending_admin",
+            "type": "pubkey"
+          },
+          {
+            "name": "keeper",
+            "type": "pubkey"
+          },
+          {
+            "name": "platform_mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "descriptors",
+            "type": "u8"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PendingChange",
+      "docs": [
+        "A timelocked admin change `[\"pending\", id]`. Anyone may execute it from `eta` to `expires_at`",
+        "while it is still the live proposal of its kind (`Config.latest_change_ids[kind] == id`); a newer",
+        "proposal of the same kind, `pause_keeper` (Keeper changes) or `accept_admin` (all) supersede",
+        "it. Status for indexers: superseded if not the live id, expired after `expires_at`, queued",
+        "before `eta`, executable otherwise. The admin may cancel it; anyone may discard it once",
+        "superseded or expired. Only the payload field of its `kind` is meaningful."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "id",
+            "type": "u64"
+          },
+          {
+            "name": "kind",
+            "type": {
+              "defined": {
+                "name": "ChangeKind"
+              }
+            }
+          },
+          {
+            "name": "proposer",
+            "type": "pubkey"
+          },
+          {
+            "name": "proposed_at",
+            "type": "i64"
+          },
+          {
+            "name": "eta",
+            "type": "i64"
+          },
+          {
+            "name": "expires_at",
+            "docs": [
+              "Last moment it can execute (`eta + EXECUTE_WINDOW_SECS`)."
+            ],
+            "type": "i64"
+          },
+          {
+            "name": "keeper",
+            "type": "pubkey"
+          },
+          {
+            "name": "params",
+            "type": {
+              "defined": {
+                "name": "Params"
+              }
+            }
+          },
+          {
+            "name": "descriptors",
+            "type": {
+              "vec": {
+                "defined": {
+                  "name": "TradeDescriptor"
+                }
+              }
+            }
+          },
+          {
+            "name": "copier",
+            "docs": [
+              "The Index copier whose targets change (`IndexTargets`)."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "targets",
+            "type": {
+              "vec": "pubkey"
+            }
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlatformBurned",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "sol_in",
+            "type": "u64"
+          },
+          {
+            "name": "tokens_burned",
+            "type": "u64"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Position",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "docs": [
+              "The copier's mint."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "token_mint",
+            "docs": [
+              "The traded coin."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "target",
+            "docs": [
+              "The target this position copies."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "tokens",
+            "type": "u64"
+          },
+          {
+            "name": "cost",
+            "docs": [
+              "Cost basis (lamports spent, rent included)."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "target_snapshot",
+            "docs": [
+              "Target's balance after the last copied trade."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "target_peak",
+            "docs": [
+              "Target's balance at the last vault buy; with `vault_peak` sets the proportional sell."
+            ],
+            "type": "u64"
+          },
+          {
+            "name": "vault_peak",
+            "type": "u64"
+          },
+          {
+            "name": "opened_at",
+            "type": "i64"
+          },
+          {
+            "name": "last_trade_ts",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ProfitSplit",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "excess",
+            "type": "u64"
+          },
+          {
+            "name": "to_buyback",
+            "type": "u64"
+          },
+          {
+            "name": "to_platform",
+            "type": "u64"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Side",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Buy"
+          },
+          {
+            "name": "Sell"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TradeDescriptor",
+      "docs": [
+        "One whitelisted venue instruction. The keeper forwards that instruction's exact account list",
+        "as remaining accounts and its full data (discriminator included); the program checks the roles",
+        "below, signs as `remaining[user_idx]` and measures the fill from balance deltas."
+      ],
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "program",
+            "docs": [
+              "pump or pump_amm only."
+            ],
+            "type": "pubkey"
+          },
+          {
+            "name": "disc",
+            "type": {
+              "array": [
+                "u8",
+                8
+              ]
+            }
+          },
+          {
+            "name": "side",
+            "type": {
+              "defined": {
+                "name": "Side"
+              }
+            }
+          },
+          {
+            "name": "venue",
+            "type": {
+              "defined": {
+                "name": "Venue"
+              }
+            }
+          },
+          {
+            "name": "user_idx",
+            "type": "u8"
+          },
+          {
+            "name": "base_mint_idx",
+            "type": "u8"
+          },
+          {
+            "name": "venue_idx",
+            "type": "u8"
+          },
+          {
+            "name": "min_accounts",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "TraderVerified",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "mint",
+            "type": "pubkey"
+          },
+          {
+            "name": "target",
+            "type": "pubkey"
+          },
+          {
+            "name": "verified",
+            "type": "bool"
+          },
+          {
+            "name": "ts",
+            "type": "i64"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Venue",
+      "type": {
+        "kind": "enum",
+        "variants": [
+          {
+            "name": "Curve"
+          },
+          {
+            "name": "Pool"
+          }
+        ]
+      }
+    }
+  ]
+}

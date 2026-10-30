@@ -1,0 +1,24 @@
+# Build context = repo root (pnpm workspace). Keys, local chain state and build output never enter an image.
+.git
+.mainnet
+.secrets
+.localnet
+.devnet
+.research
+.tmp
+.anchor
+%TEMP%
+target
+tests
+programs
+test-ledger
+**/node_modules
+**/.next*
+**/*.tsbuildinfo
+**/*.log
+**/.env
+**/.env.*
+apps/indexer/data
+apps/watcher/data
+apps/watcher/.keeper*.db*
+docs/research

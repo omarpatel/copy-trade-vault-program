@@ -1,0 +1,26 @@
+{
+  "name": "@copy-trade-vault/scripts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "setup": "tsx src/setup.ts",
+    "seed": "tsx src/seed.ts",
+    "simulate": "tsx src/simulate.ts",
+    "preflight": "tsx src/preflight.ts",
+    "ops-check": "tsx src/ops-check.ts",
+    "admin": "tsx src/admin.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@coral-xyz/anchor": "0.31.1",
+    "@copy-trade-vault/indexer": "workspace:*",
+    "@copy-trade-vault/sdk": "workspace:*",
+    "@solana/spl-token": "^0.4.13",
+    "@solana/web3.js": "^1.99.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  }
+}

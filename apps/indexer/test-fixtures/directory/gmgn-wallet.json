@@ -1,0 +1,16 @@
+{
+ "code": 0,
+ "msg": "success",
+ "data": {
+  "twitter_username": "Cented7",
+  "twitter_name": "cented",
+  "twitter_fans_num": 666465,
+  "name": "cented",
+  "avatar": "https://gmgn.ai/defi/images/twitter/b8cd9c6689e23071d3dd80c1f404bb99.jpg",
+  "tags": [
+   "axiom",
+   "photon"
+  ],
+  "last_active_timestamp": 1791145162
+ }
+}

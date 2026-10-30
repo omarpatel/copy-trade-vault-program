@@ -1,0 +1,3 @@
+.keeper*.db
+.keeper*.db-wal
+.keeper*.db-shm

@@ -1,0 +1,82 @@
+{
+  "pump-curve-buy": {
+    "signature": "5rx6EvzyV4boYc6KaQG8z6B98yoGjL1Q2aCrWPaQKmQkPmARFLsnjRRN3hZU6EufRZCsGWr6JN7e9MxUbsPPZXKV",
+    "target": "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+    "version": 0,
+    "slot": 448158823,
+    "blockTime": 1789754602
+  },
+  "pump-curve-sell": {
+    "signature": "2xWNt5hXZJvWCZNZCkGn7X6yc5H1xK7B7tZH6ti1p387NR73PYHStaQooejUxo5hUFL9UsWxY9xoia69A9v4RTkL",
+    "target": "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+    "version": 0,
+    "slot": 448158946,
+    "blockTime": 1789754634
+  },
+  "pumpswap-buy": {
+    "signature": "3WbAHob9ubHK7J2yaHPH6YLPLhCkayhpVMyXJLTDX6DqSNZ51YntQszYLdXUSHdqAPX1LGpKFuMM8d5ttCDdfBHJ",
+    "target": "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+    "version": 0,
+    "slot": 427989477,
+    "blockTime": 1782064148
+  },
+  "pumpswap-sell": {
+    "signature": "2Pv4byMzTntKGmRYZomXBpv4Ns2mMD9WbGF5kk2tU4a2icCRs461KtVCpiSLzs6TiPUQARCMzk64WeFvupDJG8Qp",
+    "target": "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk",
+    "version": 0,
+    "slot": 427990489,
+    "blockTime": 1782064554
+  },
+  "router-pumpswap-buy": {
+    "signature": "5SSx3z5Lxt9sPz3iUq2LVmYMaV6VexrASVxbUztgQCFTL1pvzkDXCD88jo2QhNTP2y8zT5aaHVATHq1ieRGoCHnS",
+    "target": "AVAZvHLR2PcWpDf8BXY4rVxNHYRBytycHkcB5z5QNXYm",
+    "version": 0,
+    "slot": 453105792,
+    "blockTime": 1791076638
+  },
+  "router-pumpswap-sell": {
+    "signature": "2ESt6cwpsMPDdehdVuSchca4qAqYDnxqYGPzS9NZfjiV5LZxnE4PsmTTLUNsZeN2if7MiM8WhbWWATD95HdTJ67r",
+    "target": "AVAZvHLR2PcWpDf8BXY4rVxNHYRBytycHkcB5z5QNXYm",
+    "version": 0,
+    "slot": 453105694,
+    "blockTime": 1791076613
+  },
+  "jupiter-sell": {
+    "signature": "588F9a8LPrFCc1GqZuBfXF1cTRG3ujuzGBtsNXMUxMJzXfUGW5xePisVRXxPmxnTrorDWx1NNYZVP8UAjFbqmaWm",
+    "target": "ANHSfEBJQMJrZTmCaxzcktQv2Adb2kaS7Ngi2jKcSra4",
+    "version": 0,
+    "slot": 453237855,
+    "blockTime": 1791111917
+  },
+  "creator-fee-receipt": {
+    "signature": "2nUojuvDE16rQk1Xb9JUiPnvoGdfbLtAnBZW27fxGciddTgi1aiFdiHYdK7HY493zx3PmXcUrMrJbXHuh51qQ6Mo",
+    "target": "AVAZvHLR2PcWpDf8BXY4rVxNHYRBytycHkcB5z5QNXYm",
+    "version": 0,
+    "slot": 453105882,
+    "blockTime": 1791076662
+  },
+  "v1-mention-spam": {
+    "signature": "4u9xQp9QkNVRPt8ehzLdnpiSqjgnXcfiEtRsreV9jCp33GRSdtUehSJcdsFDY4UV6E4TsXwqmUC1k3cdtb8CDFmi",
+    "target": "Bi4rd5FH5bYEN8scZ7wevxNZyNmKHdaBcvewdPFxYdLt",
+    "version": 1,
+    "slot": 453235873,
+    "blockTime": 1791111388
+  },
+  "ata-create-spam": {
+    "signature": "wc5whs4KavExtEYLNWPCo1bQ8Q2xdtGhf1o6BYbUo1x859vuS6KM6F7qp5TktfMpwe1mCMRs9coAd5hzTTp29W5",
+    "target": "G6fUXjMKPJzCY1rveAE6Qm7wy5U3vZgKDJmN1VPAdiZC",
+    "version": "legacy",
+    "slot": 453235060,
+    "blockTime": 1791111173
+  },
+  "pump-coin-airdrop": {
+    "signature": "5W6KnZzvYZ4zoVuVXix8CdrdDWRAQGPGHyzxBTrcKx7CM8xB9FR8ayUC8De6FEnjsXDAo7ToqAZv2Aaj7o3gi361",
+    "target": "G6fUXjMKPJzCY1rveAE6Qm7wy5U3vZgKDJmN1VPAdiZC",
+    "alsoTargets": [
+      "4BdKaxN8G6ka4GYtQQWk4G4dZRUTX2vQH9GcXdBREFUk"
+    ],
+    "version": "legacy",
+    "slot": 453234238,
+    "blockTime": 1791110953
+  }
+}

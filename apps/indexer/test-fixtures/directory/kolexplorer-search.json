@@ -1,0 +1,37 @@
+﻿{
+ "rows": [
+  {
+   "id": 108,
+   "name": "Coler",
+   "slug": "coler",
+   "twitter": "https://x.com/ColerCooks",
+   "address": "99xnE2zEFi8YhmKDaikc1EvH6ELTQJppnqUwMzmpLXrs",
+   "img": "coler-1768530086.jpg",
+   "profit7d": 195803,
+   "profit30d": 22169.3,
+   "winrate7d": 42.79
+  },
+  {
+   "id": 154,
+   "name": "Decu",
+   "slug": "decu",
+   "twitter": "https://x.com/notdecu",
+   "address": "4vw54BmAogeRV3vPKWyFet5yf8DTLcREzdSzx4rw9Ud9",
+   "img": "decu-1770170944.jpg",
+   "profit7d": 179387,
+   "profit30d": 836538,
+   "winrate7d": 72.15
+  },
+  {
+   "id": 4,
+   "name": "Cented",
+   "slug": "cented",
+   "twitter": "https://x.com/flipski77",
+   "address": "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o",
+   "img": "Cented.jpg",
+   "profit7d": 162628,
+   "profit30d": 599985,
+   "winrate7d": 52.17
+  }
+ ]
+}
