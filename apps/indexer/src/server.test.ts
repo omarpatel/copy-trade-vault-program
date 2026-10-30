@@ -12,8 +12,8 @@ import { createUploader } from "./upload";
 import { Views } from "./views";
 
 const TOKEN = "test-ingest-token";
-const COPIER = "G6fUXjMKPJzCY1rveAE6Qm7wy5U3vZgKDJmN1VPAdiZC";
-const TARGET = "CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o";
+const COPIER = "D1YLG89jz5vPH4UHYPZqQrE47CRehFWuGiWSLP6Pj9uC";
+const TARGET = "FxdFhjeXqNRerLLiPznscf2dXFAvgUXZuJkFSoxHaxgi";
 const MINT = "So11111111111111111111111111111111111111112";
 const SIG = "4".repeat(88);
 
@@ -100,11 +100,11 @@ describe("read API on an empty index", () => {
 
   test("trader profile of an unknown valid wallet is 200 with entry null; directory comes from kols.json", async () => {
     const p = (await app.inject({ url: `/api/traders/${COPIER}` })).json();
-    assert.equal(p.entry?.name, "clukz");
+    assert.equal(p.entry?.name, "Sample Trader D");
     const unknown = await app.inject({ url: "/api/traders/11111111111111111111111111111112" });
     assert.equal(unknown.statusCode, 200);
     assert.equal(unknown.json().entry, null);
-    const dir = (await app.inject({ url: "/api/traders?q=cented" })).json();
+    const dir = (await app.inject({ url: "/api/traders?q=sample_trader_a" })).json();
     assert.equal(dir.items[0].address, TARGET);
     assert.deepEqual(dir.items[0].tags, ["hft"]);
   });
@@ -209,19 +209,19 @@ describe("POST /api/upload (local storage)", () => {
   };
 
   test("stores image + pump-style metadata JSON and serves both", async () => {
-    const res = await post(form(PNG, { name: "Copier clukz", symbol: "CCLUKZ", description: "copies clukz", twitter: "clukzSOL" }));
+    const res = await post(form(PNG, { name: "Sample D Copier", symbol: "CSAMPD", description: "copies Sample Trader D", twitter: "sample_trader_d" }));
     assert.equal(res.statusCode, 200, res.body);
     const { uri, image } = res.json();
     assert.match(uri, /^http:\/\/127\.0\.0\.1:8790\/files\/meta\/[\w-]+\.json$/);
     const meta = (await app.inject({ url: new URL(uri).pathname })).json();
     assert.deepEqual(meta, {
-      name: "Copier clukz",
-      symbol: "CCLUKZ",
-      description: "copies clukz",
+      name: "Sample D Copier",
+      symbol: "CSAMPD",
+      description: "copies Sample Trader D",
       image,
       showName: true,
       createdOn: "https://pump.fun",
-      twitter: "clukzSOL",
+      twitter: "sample_trader_d",
     });
     const img = await app.inject({ url: new URL(image).pathname });
     assert.equal(img.statusCode, 200);

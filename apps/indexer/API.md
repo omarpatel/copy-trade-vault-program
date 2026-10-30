@@ -116,13 +116,13 @@ name or handle (case-insensitive, `$` prefix ignored).
     "kind": "single",
     "launcher": "4Qn…",
     "vault": "9Vt…",
-    "targets": [{ "address": "G6fUXjMKPJzCY1rveAE6Qm7wy5U3vZgKDJmN1VPAdiZC", "name": "clukz", "handle": "clukzSOL", "avatar": null, "verified": true }],
+    "targets": [{ "address": "D1YLG89jz5vPH4UHYPZqQrE47CRehFWuGiWSLP6Pj9uC", "name": "Sample Trader D", "handle": "sample_trader_d", "avatar": null, "verified": true }],
     "traderBps": 1500,
     "verifiedMask": 1,
     "createdAt": 1759550000,
     "isPlatformToken": false,
-    "name": "Copier clukz",
-    "symbol": "CCLUKZ",
+    "name": "Sample D Copier",
+    "symbol": "CSAMPD",
     "image": "https://ipfs.io/ipfs/bafy…",
     "market": {
       "venue": "curve", "graduated": false, "pool": null,
@@ -158,7 +158,7 @@ name or handle (case-insensitive, `$` prefix ignored).
       "status": "intact",
       "checkedAt": 1759559990,
       "detail": null,
-      "shareholders": [{ "address": "G6fU…", "bps": 1500 }, { "address": "9Vt…", "bps": 8500 }]
+      "shareholders": [{ "address": "D1YL…", "bps": 1500 }, { "address": "9Vt…", "bps": 8500 }]
     }
   }
 ]
@@ -170,7 +170,7 @@ The summary plus (`targets` become `CopierTarget[]`):
 
 ```json
 {
-  "targets": [{ "address": "G6fU…", "name": "clukz", "handle": "clukzSOL", "avatar": null, "verified": true,
+  "targets": [{ "address": "D1YL…", "name": "Sample Trader D", "handle": "sample_trader_d", "avatar": null, "verified": true,
                 "index": 0, "openPositions": 3, "realizedPnlLamports": "1200000000", "copies": 41, "skipped": 30, "lastTradeAt": 1759559800 }],
   "sharingConfig": "Fs3…",
   "graduatedPool": null,
@@ -179,8 +179,8 @@ The summary plus (`targets` become `CopierTarget[]`):
               "minSignalLamports": "50000000", "signalMultipleBps": 10000, "maxImpactBps": 300, "slippageBps": 500,
               "vaultFloorLamports": "20000000", "maxHoldSecs": 604800, "keeperGraceSecs": 3600 },
   "keeper": "Kp1…",
-  "coin": { "name": "Copier clukz", "symbol": "CCLUKZ", "uri": "https://ipfs.io/ipfs/bafk…", "image": "https://ipfs.io/ipfs/bafy…",
-            "description": "Copies clukz", "twitter": "https://x.com/…", "telegram": null, "website": null },
+  "coin": { "name": "Sample D Copier", "symbol": "CSAMPD", "uri": "https://ipfs.io/ipfs/bafk…", "image": "https://ipfs.io/ipfs/bafy…",
+            "description": "Copies Sample Trader D", "twitter": "https://x.com/…", "telegram": null, "website": null },
   "fees": { "distributedLamports": "4820000000", "toVaultLamports": "4100000000", "toTargetsLamports": "720000000",
             "feesInLamports": "4100000000", "distributions": 17, "lastDistributedAt": 1759559700 },
   "wsolLamports": "0",
@@ -205,7 +205,7 @@ Sorted by cost basis, largest first.
   {
     "copier": "7Hk3…pump", "tokenMint": "Bq…pump",
     "coin": { "mint": "Bq…pump", "name": "Frog", "symbol": "FROG", "image": "https://…" },
-    "target": "G6fU…", "venue": "curve", "tokens": "3480000000000", "decimals": 6,
+    "target": "D1YL…", "venue": "curve", "tokens": "3480000000000", "decimals": 6,
     "costLamports": "1000000000", "openedAt": 1759558000, "firstCopySig": "5Kq…",
     "targetSnapshot": "35000000000000", "targetPeak": "35000000000000", "vaultPeak": "3480000000000",
     "markPriceLamports": 316.2, "valueLamports": "1100376000", "unrealizedLamports": "100376000",
@@ -223,8 +223,8 @@ indexed yet).
 ```json
 [
   {
-    "id": "7Hk3…pump:3xT…:Bq…pump", "copier": "7Hk3…pump", "copierSymbol": "CCLUKZ", "ts": 1759559800,
-    "target": { "address": "G6fU…", "name": "clukz", "handle": "clukzSOL", "avatar": null, "verified": true },
+    "id": "7Hk3…pump:3xT…:Bq…pump", "copier": "7Hk3…pump", "copierSymbol": "CSAMPD", "ts": 1759559800,
+    "target": { "address": "D1YL…", "name": "Sample Trader D", "handle": "sample_trader_d", "avatar": null, "verified": true },
     "targetSig": "3xT…", "targetTs": 1759559800, "targetSlot": 3100,
     "side": "buy", "tokenMint": "Bq…pump", "coin": { "mint": "Bq…pump", "name": "Frog", "symbol": "FROG", "image": null },
     "targetSolLamports": "2000000000", "targetTokens": "35000000000000",
@@ -244,7 +244,7 @@ indexed yet).
 Every `CopierBuy` / `CopierSell` of the vault (forced exits included), newest first.
 
 ```json
-[{ "copier": "7Hk3…pump", "signature": "5Kq…", "slot": 3103, "ts": 1759559801, "side": "sell", "target": "G6fU…",
+[{ "copier": "7Hk3…pump", "signature": "5Kq…", "slot": 3103, "ts": 1759559801, "side": "sell", "target": "D1YL…",
    "tokenMint": "Bq…pump", "coin": { "mint": "Bq…pump", "name": "Frog", "symbol": "FROG", "image": null }, "venue": "curve",
    "solLamports": "1300000000", "tokens": "3480000000000", "costRemovedLamports": "1000000000", "pnlLamports": "300000000",
    "realizedPnlLamports": "1500000000", "hwmLamports": "1500000000", "forced": false, "equityLamports": null,
@@ -328,19 +328,19 @@ source's own view (`listed: false` = profile enrichment only, e.g. its pump.fun 
 
 ```json
 {
-  "address": "G6fU…",
-  "entry": { "address": "G6fU…", "name": "clukz", "…": "DirectoryEntry" },
-  "person": { "id": "clukzsol", "name": "clukz", "handle": "clukzSOL", "xUrl": "https://x.com/clukzSOL",
+  "address": "D1YL…",
+  "entry": { "address": "D1YL…", "name": "Sample Trader D", "…": "DirectoryEntry" },
+  "person": { "id": "sample_trader_d", "name": "Sample Trader D", "handle": "sample_trader_d", "xUrl": "https://x.com/sample_trader_d",
               "displayName": null, "avatar": "…-128.webp", "avatarLarge": "…-256.webp", "followers": 41000,
-              "followersOn": "x", "wallets": [{ "address": "G6fU…", "…": "DirectoryEntry" }] },
-  "sources": [{ "source": "kolscan", "rank": 41, "url": "https://kolscan.io/account/G6fU…", "name": "clukz",
-                "handle": "clukzSOL", "followers": null, "stats": { "…": "TraderStats" }, "tags": [], "notes": null,
+              "followersOn": "x", "wallets": [{ "address": "D1YL…", "…": "DirectoryEntry" }] },
+  "sources": [{ "source": "kolscan", "rank": 41, "url": "https://kolscan.io/account/D1YL…", "name": "Sample Trader D",
+                "handle": "sample_trader_d", "followers": null, "stats": { "…": "TraderStats" }, "tags": [], "notes": null,
                 "fetchedAt": 1791150000, "listed": true }],
   "copiers": [{ "mint": "7Hk3…pump", "…": "CopierSummary" }],
   "earnedLamports": "720000000",
-  "earnings": [{ "copier": "7Hk3…pump", "symbol": "CCLUKZ", "lamports": "720000000", "distributions": 17 }],
+  "earnings": [{ "copier": "7Hk3…pump", "symbol": "CSAMPD", "lamports": "720000000", "distributions": 17 }],
   "verifiedOn": ["7Hk3…pump"],
-  "recentTrades": [{ "copier": "7Hk3…pump", "target": "G6fU…", "signature": "3xT…", "slot": 3100, "blockTime": 1759559800,
+  "recentTrades": [{ "copier": "7Hk3…pump", "target": "D1YL…", "signature": "3xT…", "slot": 3100, "blockTime": 1759559800,
                      "side": "buy", "tokenMint": "Bq…pump", "coin": { "…": "…" }, "tokenDelta": "35000000000000",
                      "solDelta": "-2000000000", "targetSolBefore": "61000000000", "priceLamportsPerToken": 0.0000571,
                      "venue": "curve", "status": "copied", "reason": null, "error": null, "vaultSignature": "5Kq…",
@@ -360,7 +360,7 @@ both carry it).
 ```json
 [
   { "kind": "coin", "signature": "2Pa…", "slot": 3050, "ts": 1759559000, "copier": "7Hk3…pump", "mint": "7Hk3…pump",
-    "symbol": "CCLUKZ", "image": "https://…", "solLamports": "150000000", "tokens": "3600000000000", "totalBurned": "12000000000000" },
+    "symbol": "CSAMPD", "image": "https://…", "solLamports": "150000000", "tokens": "3600000000000", "totalBurned": "12000000000000" },
   { "kind": "platform", "signature": "6Rz…", "slot": 3060, "ts": 1759559100, "copier": "Ix9…pump", "mint": "Ix9…pump",
     "symbol": "copy-vault", "image": "https://…", "solLamports": "50000000", "tokens": "900000000000", "totalBurned": null }
 ]
@@ -375,10 +375,10 @@ Merged, newest first. `{ type, id, ts, mint, data }` with `data`: `Copy` | `Burn
 ```json
 [
   { "type": "fees", "id": "fees:distribution:4Lm…:7Hk3…pump", "ts": 1759559700, "mint": "7Hk3…pump",
-    "data": { "kind": "distribution", "copier": "7Hk3…pump", "symbol": "CCLUKZ", "signature": "4Lm…", "slot": 3080, "ts": 1759559700,
+    "data": { "kind": "distribution", "copier": "7Hk3…pump", "symbol": "CSAMPD", "signature": "4Lm…", "slot": 3080, "ts": 1759559700,
               "lamports": "282000000", "toVaultLamports": "239700000", "toTargetsLamports": "42300000", "totalFeesInLamports": null, "from": null } },
   { "type": "profit", "id": "profit:5Kq…:1", "ts": 1759559650, "mint": "7Hk3…pump",
-    "data": { "copier": "7Hk3…pump", "symbol": "CCLUKZ", "signature": "5Kq…", "slot": 3075, "ts": 1759559650,
+    "data": { "copier": "7Hk3…pump", "symbol": "CSAMPD", "signature": "5Kq…", "slot": 3075, "ts": 1759559650,
               "excessLamports": "200000000", "toBuybackLamports": "150000000", "toPlatformLamports": "50000000" } }
 ]
 ```
@@ -424,7 +424,7 @@ open cost basis (positions opened on its trades), equal split while flat. `seedL
 {
   "mint": "Ix9…pump",
   "copier": { "mint": "Ix9…pump", "kind": "index", "…": "CopierDetail" },
-  "targets": [{ "address": "G6fU…", "name": "clukz", "handle": "clukzSOL", "avatar": null, "verified": false, "index": 0,
+  "targets": [{ "address": "D1YL…", "name": "Sample Trader D", "handle": "sample_trader_d", "avatar": null, "verified": false, "index": 0,
                 "weightBps": 6200, "copies": 12, "pnlLamports": "300000000", "openPositions": 2, "lastTradeTs": 1759559800 }],
   "seedLamports": "30000000000",
   "burnPool": "BuRn…",
@@ -448,7 +448,7 @@ Stores the image and pump.fun-style metadata JSON `{ name, symbol, description, 
 - `local` (default on a localhost RPC): files under `FILES_DIR` served at `${PUBLIC_URL}/files/…`.
 
 ```bash
-curl -F image=@coin.png -F name="Copier clukz" -F symbol=CCLUKZ -F description="Copies clukz" http://127.0.0.1:8790/api/upload
+curl -F image=@coin.png -F name="Sample D Copier" -F symbol=CSAMPD -F description="Copies Sample Trader D" http://127.0.0.1:8790/api/upload
 ```
 
 ```json
@@ -467,7 +467,7 @@ decision (e.g. `failed` → retried → `copied`). Each stored report is pushed 
 
 ```json
 { "trades": [{
-  "copier": "7Hk3…pump", "target": "G6fU…", "signature": "3xT…", "slot": 3100, "blockTime": 1759559800,
+  "copier": "7Hk3…pump", "target": "D1YL…", "signature": "3xT…", "slot": 3100, "blockTime": 1759559800,
   "side": "buy", "tokenMint": "Bq…pump", "tokenDelta": "35000000000000", "solDelta": "-2000000000",
   "targetSolBefore": "61000000000", "priceLamportsPerToken": 0.0000571, "venue": "curve",
   "status": "copied", "reason": null, "error": null, "vaultSignature": "5Kq…", "vaultSolIn": "1000000000",

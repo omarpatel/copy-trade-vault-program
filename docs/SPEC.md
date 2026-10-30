@@ -184,7 +184,7 @@ Env: `RPC_URL`, `WS_URL?`, `GRPC_URL?`/`GRPC_TOKEN?`, `KEEPER_KEYPAIR` (path) or
 Backfill + live `logsSubscribe(mentions program)` + poller for the program, decode events
 via SDK, maintain tables: copiers, positions, trades (vault), target_trades (from keeper ingest), fees, burns,
 deposits, coin_snapshots (own-coin price/mcap/supply each 15s from curve/pool), candles (1m from vault equity and
-coin price), traders (directory). KOL directory seeded from `apps/indexer/src/kols.json` (only VERIFIED addresses).
+coin price), traders (directory). Curated directory rows come from `apps/indexer/src/kols.json` (a synthetic sample; replace with your own list).
 Uploads: `POST /api/upload` (image + metadata JSON → IPFS via Pinata when `PINATA_JWT`, else pump.fun `/api/ipfs`).
 
 REST (JSON, lamports as strings, timestamps unix seconds):

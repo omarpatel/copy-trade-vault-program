@@ -18,8 +18,8 @@ const TOKEN = key(3);
 const SHARING = key(4);
 const PLATFORM_TOKEN = key(5);
 const KEEPER = key(6);
-/** clukz, a VERIFIED directory entry (kols.json). */
-const TARGET = "G6fUXjMKPJzCY1rveAE6Qm7wy5U3vZgKDJmN1VPAdiZC";
+/** Sample Trader D, a curated directory entry (kols.json). */
+const TARGET = "D1YLG89jz5vPH4UHYPZqQrE47CRehFWuGiWSLP6Pj9uC";
 const VAULT = vaultPda(new PublicKey(MINT)).toBase58();
 const NOW = 1_759_560_000;
 const SOL = 1_000_000_000n;
@@ -130,9 +130,9 @@ describe("event ingestion", () => {
     assert.deepEqual(m?.targets, [
       {
         address: TARGET,
-        name: "clukz",
-        handle: "clukzSOL",
-        xUrl: "https://x.com/clukzSOL",
+        name: "Sample Trader D",
+        handle: "sample_trader_d",
+        xUrl: "https://x.com/sample_trader_d",
         displayName: null,
         avatar: null,
         followers: null,
@@ -146,8 +146,8 @@ describe("event ingestion", () => {
   test("copier search accepts the trader's @handle as the search box suggests, and $TICKER", () => {
     register();
     const mints = (q: string) => views.list({ sort: "new", kind: null, q }).map((m) => m.mint);
-    assert.deepEqual(mints("@clukzSOL"), [MINT]);
-    assert.deepEqual(mints("clukzsol"), [MINT]);
+    assert.deepEqual(mints("@sample_trader_d"), [MINT]);
+    assert.deepEqual(mints("sample_trader_d"), [MINT]);
     assert.deepEqual(mints("@nobody"), []);
   });
 
@@ -207,7 +207,7 @@ describe("copies and lag", () => {
     assert.equal(copy?.targetSolLamports, "1000000000");
     assert.equal(copy?.vaultSolLamports, "100000000");
     assert.equal(copy?.sizeBps, 1_000);
-    assert.equal(copy?.target.name, "clukz");
+    assert.equal(copy?.target.name, "Sample Trader D");
     assert.equal(views.summary(MINT)?.lagP50Ms, 2_000);
     assert.equal(views.stats().avgLagMs, 2_000);
   });
@@ -437,7 +437,7 @@ describe("fees, burns, traders, the platform token", () => {
     assert.equal(p.earnedLamports, "200000000");
     assert.deepEqual(p.earnings, [{ copier: MINT, symbol: "", lamports: "200000000", distributions: 1 }]);
     assert.equal(p.entry?.copiersCount, 1);
-    assert.equal(views.directoryList({ q: "clukz", sources: [], tags: [], sort: "score", offset: 0, limit: 10 }).items[0]?.earnedLamports, "200000000");
+    assert.equal(views.directoryList({ q: "Sample Trader D", sources: [], tags: [], sort: "score", offset: 0, limit: 10 }).items[0]?.earnedLamports, "200000000");
     assert.equal(views.directoryList({ q: null, sources: [], tags: [], sort: "copiers", offset: 0, limit: 1 }).items[0]?.address, TARGET);
     assert.equal(views.stats().feesLamports, "1000000000");
     assert.equal(views.traderProfile(key(77)).entry, null);

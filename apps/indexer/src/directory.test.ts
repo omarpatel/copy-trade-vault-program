@@ -254,7 +254,7 @@ describe("Directory", () => {
     assert.deepEqual(q({ sources: ["pump", "kolscan"], offset: 1, limit: 1 }), [DIOR]);
     assert.deepEqual(q({ q: "@dio" }), [DIOR]);
     assert.deepEqual(q({ q: DECU.slice(0, 6).toLowerCase() }), [DECU], "address prefix, case-insensitive");
-    assert.equal(q({ tags: ["-hft"] }).includes("CyaE1VxvBrahnPWkqm5VsdCvyS2QmNht2UFrKJHga54o"), false, "curated HFT wallets excluded");
+    assert.equal(q({ tags: ["-hft"] }).includes("FxdFhjeXqNRerLLiPznscf2dXFAvgUXZuJkFSoxHaxgi"), false, "curated HFT wallets excluded");
   });
 
   test("apply() persists rows and run status; a 0-wallet result never replaces the list", async () => {

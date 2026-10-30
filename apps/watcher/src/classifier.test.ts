@@ -78,9 +78,9 @@ describe("classifyTx on recorded mainnet transactions", () => {
   it("Jupiter route sell", () => {
     const leg = only("jupiter-sell");
     assert.equal(leg.side, "sell");
-    assert.equal(leg.tokenMint, "H5mBRtgRA2jkAx4ALbF3cEbhYJJVHYcdYDSjE4wUpump");
-    assert.equal(leg.tokenDelta, -110_613_551_146n);
-    assert.equal(leg.solDelta, 27_446_420n);
+    assert.equal(leg.tokenMint, "8Xg89xT8Ve34sKiYqYuMs46mycREsCA2F362UscRpump");
+    assert.equal(leg.tokenDelta, -693_769_032n);
+    assert.equal(leg.solDelta, 19_683_241n);
   });
 
   it("pump-coin airdrop to two KOLs: unsigned increase for each, never a buy", () => {

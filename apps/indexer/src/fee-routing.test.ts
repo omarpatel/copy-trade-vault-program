@@ -5,7 +5,7 @@ import { PublicKey } from "@solana/web3.js";
 import { checkFeeRouting, expectedShareholders, type RawAccount, type RegisteredRouting } from "./fee-routing";
 
 const MINT = new PublicKey(Buffer.alloc(32, 7));
-const TARGET = new PublicKey("G6fUXjMKPJzCY1rveAE6Qm7wy5U3vZgKDJmN1VPAdiZC");
+const TARGET = new PublicKey("D1YLG89jz5vPH4UHYPZqQrE47CRehFWuGiWSLP6Pj9uC");
 const LAUNCHER = new PublicKey(Buffer.alloc(32, 9));
 const SC = sharingConfigPda(MINT);
 const VAULT = vaultPda(MINT);

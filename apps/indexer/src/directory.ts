@@ -26,7 +26,7 @@ interface KolJson {
   notes: string | null;
 }
 
-/** `kols.json`: hand-verified research rows, kept as the `curated` source. */
+/** `kols.json`: curated rows (the committed file is a synthetic sample), kept as the `curated` source. */
 function curatedRows(): SourceWallet[] {
   return (kols as KolJson[]).map((k) => {
     const address = parsePubkey(k.address);

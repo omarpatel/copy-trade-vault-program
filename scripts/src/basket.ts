@@ -21,7 +21,7 @@ interface KolEntry {
 }
 
 /**
- * The basket's wallets in file order: 1–16 distinct addresses, each in apps/indexer/src/kols.json (VERIFIED
+ * The basket's wallets in file order: 1–16 distinct addresses, each in apps/indexer/src/kols.json (curated
  * directory) and not tagged `hft`.
  */
 export function loadBasket(): { entries: BasketEntry[]; targets: PublicKey[] } {
